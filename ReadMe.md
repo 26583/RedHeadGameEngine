@@ -4,7 +4,7 @@
   <p>First I created a window using SFML.<br>
     Then I drew a simple cube using a simple color shader<br> and a vertex and an index buffer.<p/>
   <img src="documentation/RHGEturning-cube.gif"/>
-  <h2>Tecturing<h2/>
+  <h2>Texturing<h2/>
     <p>First I had to Load an Image.<br>
       This was quite simple, I just used a simple .bmp loadingscript.<br>
       <br>
