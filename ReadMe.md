@@ -13,3 +13,4 @@
       That is also why is dicided to first focus on the texturing and fix the index buffer later.
       <br><br>Result:     
     <p/>
+<img src="documentation/TurningMineGrass.gif"/>
