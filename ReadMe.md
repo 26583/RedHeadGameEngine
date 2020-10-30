@@ -10,4 +10,6 @@
       <br>
       Then I had to make a uv buffer wich was quite annoying since I was using an index buffer to use less vertices. This meant I had to also index my UV's<br>
       The funny thing is is that opengl doesn't allow multiple index buffers, so because my uv buffer was longer then my vertices buffer this proved quite diffecult.<br>
-      That is also why is dicided to first focus on the texturing and fix the index buffer later.<p/>
+      That is also why is dicided to first focus on the texturing and fix the index buffer later.
+      <br><br>Result:     
+    <p/>
