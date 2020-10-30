@@ -4,3 +4,10 @@
   <p>First I created a window using SFML.<br>
     Then I drew a simple cube using a simple color shader<br> and a vertex and an index buffer.<p/>
   <img src="documentation/RHGEturning-cube.gif"/>
+  <h2>Tecturing<h2/>
+    <p>First I had to Load an Image.<br>
+      This was quite simple, I just used a simple .bmp loadingscript.<br>
+      <br>
+      Then I had make a uv buffer wich was quite annoying since I was using an index buffer to us less vertices I had to also index my UV's<br>
+      The funny thing is is that opengl doesn't allow multiple index buffers, so because my uv buffer was longer then my vertices buffer this proved quite diffecult.<br>
+      That is also why is dicided to first focus on the texturing and fix the index buffer later.<p/>
