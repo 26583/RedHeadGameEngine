@@ -2,18 +2,20 @@
 
 Canvas::Canvas()
 {
+    //triangle = Object();
 }
 
 Canvas::~Canvas()
 {
 }
-
-
+Object* triangle = 0;
 void Canvas::Draw(sf::Window* window)
 {
-	glClearColor(0.78, 0.94, 0.94,1);
-    Object triangle = Object();
-    triangle.Draw();
+    //Object* triangle = 0;
+    if (triangle == 0) {
+        triangle = new Object();
+    }
+    triangle->Draw();
     /*
     float vertices[] = {
     -0.5f, -0.2f, 0.0f,

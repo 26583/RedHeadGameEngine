@@ -18,5 +18,6 @@ public:
 private:
 	sf::Window window;
 	bool running;
+	//Canvas canvas;
 };
 

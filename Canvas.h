@@ -11,5 +11,7 @@ public:
 	Canvas();
 	~Canvas();
 	void Draw(sf::Window* window);
+private:
+
 };
 

@@ -9,6 +9,7 @@
 #include "Math.h"
 #include <vector>
 #include "shader.h"
+#include "Loader.h"
 #pragma once
 class Object
 {
@@ -20,6 +21,8 @@ public:
 	void Draw();
 	void CreateMatrix();
 	glm::mat4 GetMVP();
+	void IndexVBO();
+	void MakeTexture();
 private:
 	unsigned int shaderProgram;
 	unsigned int VAO;
@@ -27,5 +30,7 @@ private:
 	glm::mat4 mvp;
 	GLuint ProgramID;
 	GLuint MatrixID;
+	GLuint texture;
+	GLuint TextureID;
 };
 
