@@ -1,7 +1,5 @@
 <h1>Welcome to my Game Engine!<h1/>
 <h2>!!!This Project is currently in developement<h2/>
-  <img src="documentation/TurningMineGrass.gif"/>
-  <br><br>
   <div id="project-mechanic-tab" class="project-mechanics-tab">
   <h2 style="color: #363636; cursor:pointer; padding-bottom:1.5vh;" onclick="button();">Hello Cube<h2/>
     <div id="project-mechanic-info-tab">
@@ -21,6 +19,6 @@
       That is also why is dicided to first focus on the texturing and fix the index buffer later.
       <br><br>Result:     
     <p/>
-<img src="documentation/TurningMineGrass.gif"/>
+<img src="https://github.com/26583/RedHeadGameEngine/blob/master/documentation/TurningMineGrass.gif"/>
     <div/>
    <div/>
