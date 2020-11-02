@@ -11,7 +11,7 @@
       <div/>
     <div/>
       <div id="project-mechanic-tab" class="project-mechanics-tab">
-  <h2style="color: #363636; cursor:pointer; padding-bottom:1.5vh;" onclick="button();">Texturing<h2/>
+  <h2 style="color: #363636; cursor:pointer; padding-bottom:1.5vh;" onclick="button();">Texturing<h2/>
     <div id="project-mechanic-info-tab">
     <p>First I had to Load an Image.<br>
       This was quite simple, I just used a simple .bmp loadingscript.<br>
@@ -23,4 +23,4 @@
     <p/>
 <img src="documentation/TurningMineGrass.gif"/>
     <div/>
-    <div/>
+   <div/>
