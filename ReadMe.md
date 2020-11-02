@@ -20,7 +20,7 @@
     <h2>Depth Buffer<h2/>
       <p>I first had a problem that my cubes were being drawn on top of each other in a random order.
         So I added a Depth Buffer but  for some reason it didn't work<p/>
-      <img src:"https://raw.githubusercontent.com/26583/RedHeadGameEngine/master/documentation/NoDepthBuffer.PNG"/>
+      <img src="https://raw.githubusercontent.com/26583/RedHeadGameEngine/master/documentation/NoDepthBuffer.PNG"/>
     <h2>Currently working on: Architecture;<h2/>
     </div>
    </div>
