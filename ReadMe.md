@@ -6,8 +6,8 @@
   <p>First I created a window using SFML.<br>
     Then I drew a simple cube using a simple color shader<br> and a vertex and an index buffer.<p/>
   <img src="https://github.com/26583/RedHeadGameEngine/blob/master/documentation/RHGEturning-cube.gif"/>
-      <div/>
-    <div/>
+      </div>
+    </div>
       <div id="project-mechanic-tab" class="project-mechanics-tab">
   <h2 style="color: #363636; cursor:pointer; padding-bottom:1.5vh;" onclick="button();">Texturing<h2/>
     <div id="project-mechanic-info-tab">
@@ -20,5 +20,5 @@
       <br><br>Result:     
     <p/>
 <img src="https://github.com/26583/RedHeadGameEngine/blob/master/documentation/TurningMineGrass.gif"/>
-    <div/>
-   <div/>
+    </div>
+   </div>
