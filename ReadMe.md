@@ -2,10 +2,14 @@
 <h2>!!!This Project is currently in developement<h2/>
   <img src="documentation/TurningMineGrass.gif"/>
   <br><br>
-  <h2>Hello Cube<h2/>
+  <div id="project-mechanic-tab" class="project-mechanics-tab">
+  <h2style="color: #363636; cursor:pointer; padding-bottom:1.5vh;" onclick="button();">Hello Cube<h2/>
+    <div id="project-mechanic-info-tab">
   <p>First I created a window using SFML.<br>
     Then I drew a simple cube using a simple color shader<br> and a vertex and an index buffer.<p/>
   <img src="documentation/RHGEturning-cube.gif"/>
+      </div>
+    <div/>
   <h2>Texturing<h2/>
     <p>First I had to Load an Image.<br>
       This was quite simple, I just used a simple .bmp loadingscript.<br>
