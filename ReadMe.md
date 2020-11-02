@@ -1,7 +1,7 @@
 <div id="project-mechanic-tab" class="project-mechanics-tab">
 <h1 style="color: #363636; cursor:pointer; padding-bottom:1.5vh;" onclick="button();">Welcome to my Game Engine!<h1/>
 <div id="project-mechanic-info-tab">
-<h2>!!!This Project is currently in developement<h2/>
+<h2>!!!This Project is currently in developement</h2>
   
   <h2 >Hello Cube<h2/>
   <p>First I created a window using SFML.<br>
