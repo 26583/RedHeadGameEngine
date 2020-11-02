@@ -7,7 +7,7 @@
     <div id="project-mechanic-info-tab">
   <p>First I created a window using SFML.<br>
     Then I drew a simple cube using a simple color shader<br> and a vertex and an index buffer.<p/>
-  <img src="documentation/RHGEturning-cube.gif"/>
+  <img src="https://github.com/26583/RedHeadGameEngine/blob/master/documentation/RHGEturning-cube.gif"/>
       <div/>
     <div/>
       <div id="project-mechanic-tab" class="project-mechanics-tab">
