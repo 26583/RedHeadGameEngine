@@ -21,10 +21,10 @@
       <p>I first had a problem that my cubes were being drawn on top of each other in a random order.
         So I added a Depth Buffer but  for some reason it didn't work<p/>
       <img src="https://raw.githubusercontent.com/26583/RedHeadGameEngine/master/documentation/NoDepthBuffer.PNG"/>
-    <h2>Currently working on: Architecture;<h2/>
       <p>The problem was that I had to create a depth buffer for the depth buffer to write to<p/>
       <img src="https://raw.githubusercontent.com/26583/RedHeadGameEngine/master/documentation/DepthBufferBits.PNG"/>
       <p>After I created a depth buffer through the SFML window settings, everything worked fine<p/>
       <img src="https://raw.githubusercontent.com/26583/RedHeadGameEngine/master/documentation/DepthBuffer.PNG"/>
+      <h2>Currently working on: Architecture;<h2/>
     </div>
    </div>
