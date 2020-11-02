@@ -8,7 +8,6 @@
 #include <string>
 #include "Math.h"
 #include <vector>
-#include "shader.h"
 #include "Loader.h"
 #pragma once
 class Object
@@ -20,6 +19,7 @@ public:
 	void AttributeInit();
 	void Draw();
 	void CreateMatrix();
+	void SetPosition(float x, float y, float z);
 	glm::mat4 GetMVP();
 	void IndexVBO();
 	void MakeTexture();

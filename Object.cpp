@@ -39,7 +39,6 @@ Object::Object()
     CreateMatrix();
     texture = loadBMP_custom("textures/Grass.bmp");
     TextureID = glGetUniformLocation(shaderProgram, "myTextureSampler");
-
 }
 
 Object::~Object()
@@ -166,7 +165,6 @@ bool res = loadOBJ("models/minecube.obj", vertices, uvs, normals);
 
 void Object::AttributeInit()
 {
-    
     //CREATE VERTEX ATTRIBUTE BUFFER
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
@@ -201,20 +199,29 @@ void Object::AttributeInit()
         0,                                // stride
         (void*)0                          // array buffer offset
     );
-
-
-    
 }
 
+glm::vec3 cubePositions[] = {
+    glm::vec3(0.0f,  0.0f,  0.0f),
+    glm::vec3(2.0f,  5.0f, -15.0f),
+    glm::vec3(-1.5f, -2.2f, -2.5f),
+    glm::vec3(-3.8f, -2.0f, -12.3f),
+    glm::vec3(2.4f, -0.4f, -3.5f),
+    glm::vec3(-1.7f,  3.0f, -7.5f),
+    glm::vec3(1.3f, -2.0f, -2.5f),
+    glm::vec3(1.5f,  2.0f, -2.5f),
+    glm::vec3(1.5f,  0.2f, -1.5f),
+    glm::vec3(-1.3f,  1.0f, -1.5f)
+};
 
 
 void Object::Draw()
 {
     //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     //printf("draw");
-    rotY += 0.02f;
-    CreateMatrix();
+
     AttributeInit();
+    CreateMatrix();
 
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture);
@@ -224,7 +231,6 @@ void Object::Draw()
     glUseProgram(shaderProgram);  //SET MATRIXES
     glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &mvp[0][0]);
     glBindVertexArray(VAO);
-
     glDrawArrays(GL_TRIANGLES, 0, vertices.size());
 
     glDisableVertexAttribArray(0);
@@ -242,13 +248,13 @@ void Object::CreateMatrix()
     //HERE COMES THE MVP!!!
     glm::mat4 Model = glm::mat4(1.0f);
     glm::mat4 View = glm::lookAt(
-        glm::vec3(0, 1.5f, 5.0f), // Camera is at (4,3,3), in World Space
+        glm::vec3(0, 3.f, 5.0f), // Camera is at (4,3,3), in World Space
         glm::vec3(0, 0, 0), // and looks at the origin
         glm::vec3(0, 1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
     );
     glm::mat4 projectionMatrix = glm::perspective(
         glm::radians(90.0f), // The vertical Field of View, in radians: the amount of "zoom". Think "camera lens". Usually between 90° (extra wide) and 30° (quite zoomed in)
-        800.0f / 800.0f,       // Aspect Ratio. Depends on the size of your window. Notice that 4/3 == 800/600 == 1280/960, sounds familiar ?
+        800 / 800.0f,       // Aspect Ratio. Depends on the size of your window. Notice that 4/3 == 800/600 == 1280/960, sounds familiar ?
         1.0f,              // Near clipping plane. Keep as big as possible, or you'll get precision issues.
         100.0f             // Far clipping plane. Keep as little as possible.
     );
@@ -256,6 +262,13 @@ void Object::CreateMatrix()
 
    // GLuint MatrixID = glGetUniformLocation(0, "MVP");
     MatrixID = glGetUniformLocation(shaderProgram, "MVP");
+}
+
+void Object::SetPosition(float _x, float _y, float _z)
+{
+    transform.pos.x = _x;
+    transform.pos.y = _y;
+    transform.pos.z = _z;
 }
 
 glm::mat4 Object::GetMVP()

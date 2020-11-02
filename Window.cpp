@@ -13,6 +13,7 @@ Window::~Window()
 void Window::MakeWindow(std::string windowName, int sizeX, int sizeY)
 {
     sf::ContextSettings settings;
+    settings.depthBits = 24;
     settings.majorVersion = 3;
     settings.minorVersion = 3;
 	window.create(sf::VideoMode(sizeX, sizeY), windowName, sf::Style::Default, settings);
@@ -53,6 +54,7 @@ void Window::PollWindow()
             glViewport(0, 0, event.size.width, event.size.height);
         }
     }
+    /*
     glClearColor(0.78, 0.94, 0.94, 1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -63,5 +65,17 @@ void Window::PollWindow()
     }
     canvas->Draw(&window);
     // end the current frame (internally swaps the front and back buffers)
+    */
     window.display();
+}
+
+Window& Window::get()
+{
+    static Window* gpSingleton = NULL;
+    if (gpSingleton == NULL)
+    {
+        gpSingleton = new Window();
+    }
+    assert(gpSingleton);
+    return *gpSingleton;
 }

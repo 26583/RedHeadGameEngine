@@ -15,9 +15,11 @@ public:
 	void CloseWindow();
 	bool CheckOpen();
 	void PollWindow();
+	static Window& get();
 private:
 	sf::Window window;
 	bool running;
 	//Canvas canvas;
 };
+static Window windowManager;
 

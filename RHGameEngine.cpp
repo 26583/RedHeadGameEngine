@@ -4,17 +4,24 @@
 #include "Window.h"
 #include <string>
 #include <iostream>
-Window* w;
+#include "SceneManager.h"
+//Window* w;
+Window w;
+SceneManager sceneM;
 int main()
 {
-    w = new Window();
-    w->MakeWindow("My Window", 800, 800);
+    w.MakeWindow("My Window", 800, 800);
     glewInit();
-    glEnable(GL_DEPTH_TEST);
-    glDepthFunc(GL_LEQUAL);
+    //glEnable(GL_DEPTH_TEST);
+   // glDepthFunc(GL_GREATER);
     glEnable(GL_CULL_FACE);
-    while (w->CheckOpen()) {
-        w->PollWindow();
+    sceneM.AddObject(0,0,0);
+    sceneM.AddObject(1, 1, -1);
+    while (w.CheckOpen()) {
+        //Loop here
+        //end draw loop
+        w.PollWindow();
+        sceneM.Update();
     }
     return 0;
 }
