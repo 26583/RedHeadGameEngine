@@ -10,7 +10,9 @@
   <img src="documentation/RHGEturning-cube.gif"/>
       <div/>
     <div/>
-  <h2>Texturing<h2/>
+      <div id="project-mechanic-tab" class="project-mechanics-tab">
+  <h2style="color: #363636; cursor:pointer; padding-bottom:1.5vh;" onclick="button();">Texturing<h2/>
+    <div id="project-mechanic-info-tab">
     <p>First I had to Load an Image.<br>
       This was quite simple, I just used a simple .bmp loadingscript.<br>
       <br>
@@ -20,3 +22,5 @@
       <br><br>Result:     
     <p/>
 <img src="documentation/TurningMineGrass.gif"/>
+    <div/>
+    <div/>
