@@ -3,7 +3,7 @@
   <img src="documentation/TurningMineGrass.gif"/>
   <br><br>
   <div id="project-mechanic-tab" class="project-mechanics-tab">
-  <h2 >Hello Cube<h2/>
+  <h2 style="color: #363636; cursor:pointer; padding-bottom:1.5vh;" onclick="button();">Hello Cube<h2/>
     <div id="project-mechanic-info-tab">
   <p>First I created a window using SFML.<br>
     Then I drew a simple cube using a simple color shader<br> and a vertex and an index buffer.<p/>
