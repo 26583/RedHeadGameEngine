@@ -9,33 +9,23 @@
 #include "Math.h"
 #include <vector>
 #include "Loader.h"
-#include "Mesh.h"
 #include "Material.h"
 #pragma once
-class Object
+class Mesh
 {
 public:
-	Object();
-	~Object();
-	void ShaderInit();
+	Mesh(const char* _model, Math::Transform* _transform, Material* _material);
+	~Mesh();
 	void AttributeInit();
-	void Draw();
 	void CreateMatrix();
-	void SetPosition(glm::vec3 position);
-	glm::mat4 GetMVP();
-	void IndexVBO();
-	void MakeTexture();
+	void Render();
 private:
-	unsigned int shaderProgram;
+	std::vector< glm::vec3 > vertices;
+	std::vector< glm::vec2 > uvs;
+	std::vector< glm::vec3 > normals;
+	Math::Transform* transform;
 	unsigned int VAO;
-	Math::Transform transform;
 	glm::mat4 mvp;
-	GLuint ProgramID;
 	GLuint MatrixID;
-	GLuint texture;
-	GLuint TextureID;
-	GLuint ModelM;
-	Mesh* mesh;
 	Material* material;
 };
-

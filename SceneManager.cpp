@@ -11,10 +11,10 @@ SceneManager::~SceneManager()
 {
 }
 
-void SceneManager::AddObject(float _x, float _y, float _z)
+void SceneManager::AddObject(glm::vec3 position)
 {
     Object* object = new Object();
-    object->SetPosition(_x, _y, _z);
+    object->SetPosition(position);
     scene.push_back(object);
 }
 

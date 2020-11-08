@@ -8,7 +8,7 @@ class SceneManager
 public:
 	SceneManager();
 	~SceneManager();
-	void AddObject(float _x,float _y,float _z);
+	void AddObject(glm::vec3 position);
 	void Update();
 	static SceneManager& get();
 private:

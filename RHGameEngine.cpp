@@ -12,11 +12,11 @@ int main()
 {
     w.MakeWindow("My Window", 800, 800);
     glewInit();
-    //glEnable(GL_DEPTH_TEST);
+    glEnable(GL_DEPTH_TEST);
    // glDepthFunc(GL_GREATER);
     glEnable(GL_CULL_FACE);
-    sceneM.AddObject(0,0,0);
-    sceneM.AddObject(1, 1, -1);
+    sceneM.AddObject(glm::vec3(0, 0, 0));
+    sceneM.AddObject(glm::vec3(1,1,-1));
     while (w.CheckOpen()) {
         //Loop here
         //end draw loop

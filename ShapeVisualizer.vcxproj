@@ -156,7 +156,9 @@
   <ItemGroup>
     <ClCompile Include="Canvas.cpp" />
     <ClCompile Include="Loader.cpp" />
+    <ClCompile Include="Material.cpp" />
     <ClCompile Include="Math.cpp" />
+    <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="RHGameEngine.cpp" />
     <ClCompile Include="SceneManager.cpp" />
@@ -166,7 +168,9 @@
   <ItemGroup>
     <ClInclude Include="Canvas.h" />
     <ClInclude Include="Loader.h" />
+    <ClInclude Include="Material.h" />
     <ClInclude Include="Math.h" />
+    <ClInclude Include="Mesh.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Shader.h" />

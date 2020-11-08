@@ -33,12 +33,21 @@ const char* fragmentShaderSource = "#version 330 core\n"
 
 Object::Object()
 {
+    transform.size = glm::vec3(1,1,1);
+    material = new Material("SimpleVertexShader.vertexshader", "SimpleColor.fragmentshader", "textures/Grass.bmp");
+    mesh = new Mesh("models/minecube.obj", &transform, material);
     //ShaderInit();
-    shaderProgram = LoadShaders("SimpleVertexShader.vertexshader", "SimpleColor.fragmentshader");
-    AttributeInit();
-    CreateMatrix();
+   // mesh->AttributeInit();
+    //mesh->CreateMatrix();
+    //shaderProgram = LoadShaders("SimpleVertexShader.vertexshader", "SimpleColor.fragmentshader");
+    //AttributeInit();
+    //CreateMatrix();
+    /*
     texture = loadBMP_custom("textures/Grass.bmp");
     TextureID = glGetUniformLocation(shaderProgram, "myTextureSampler");
+    MatrixID = glGetUniformLocation(shaderProgram, "MVP");
+    ModelM = glGetUniformLocation(shaderProgram, "ModelMat");
+    */
 }
 
 Object::~Object()
@@ -201,25 +210,11 @@ void Object::AttributeInit()
     );
 }
 
-glm::vec3 cubePositions[] = {
-    glm::vec3(0.0f,  0.0f,  0.0f),
-    glm::vec3(2.0f,  5.0f, -15.0f),
-    glm::vec3(-1.5f, -2.2f, -2.5f),
-    glm::vec3(-3.8f, -2.0f, -12.3f),
-    glm::vec3(2.4f, -0.4f, -3.5f),
-    glm::vec3(-1.7f,  3.0f, -7.5f),
-    glm::vec3(1.3f, -2.0f, -2.5f),
-    glm::vec3(1.5f,  2.0f, -2.5f),
-    glm::vec3(1.5f,  0.2f, -1.5f),
-    glm::vec3(-1.3f,  1.0f, -1.5f)
-};
-
-
 void Object::Draw()
 {
     //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     //printf("draw");
-
+    /*
     AttributeInit();
     CreateMatrix();
 
@@ -235,13 +230,17 @@ void Object::Draw()
 
     glDisableVertexAttribArray(0);
     glDisableVertexAttribArray(1);
+    */
+    //mesh->AttributeInit();
+    //mesh->CreateMatrix();
+    mesh->Render();
 }
 
 void Object::CreateMatrix()
 {
     glMatrixMode(GL_PROJECTION);
-    glm::mat4 TranslationMatrix = glm::translate(glm::mat4(1), glm::vec3(transform.pos.x, transform.pos.y, transform.pos.z));
-    glm::mat4 ScaleMatrix = glm::scale(glm::vec3(transform.size.x, transform.size.y, transform.size.z));
+    glm::mat4 TranslationMatrix = glm::translate(glm::mat4(1),glm::vec3(transform.position));
+    glm::mat4 ScaleMatrix = glm::scale(glm::vec3(transform.size));
     glm::mat4 RotationMatrix = glm::rotate(rotY, glm::vec3(0.0f,10.0f,0.0f));
     glm::mat4 ModelMatrix = TranslationMatrix * RotationMatrix * ScaleMatrix;
 
@@ -264,11 +263,9 @@ void Object::CreateMatrix()
     MatrixID = glGetUniformLocation(shaderProgram, "MVP");
 }
 
-void Object::SetPosition(float _x, float _y, float _z)
+void Object::SetPosition(glm::vec3 position)
 {
-    transform.pos.x = _x;
-    transform.pos.y = _y;
-    transform.pos.z = _z;
+    transform.position = position;
 }
 
 glm::mat4 Object::GetMVP()
