@@ -3,7 +3,7 @@
 <div id="project-mechanic-info-tab">
 <h2>!!!This Project is currently in developement</h2>
   
-  <h2 >Hello Cube<h2/>
+  <h2 color="red";>Hello Cube<h2/>
   <p>First I created a window using SFML.<br>
     Then I drew a simple cube using a simple color shader<br> and a vertex and an index buffer.<p/>
   <img src="https://raw.githubusercontent.com/26583/RedHeadGameEngine/master/documentation/RHGEturning-cube.gif"/>
