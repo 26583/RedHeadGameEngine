@@ -1,5 +1,5 @@
 <div id="project-mechanic-tab" class="project-mechanics-tab">
-<input type="checkbox"><h1 style="color: #363636; cursor:pointer; padding-bottom:1.5vh;" onclick="button();">Welcome to my Game Engine!</h1></input>
+<h1 style="color: #363636; cursor:pointer; padding-bottom:1.5vh;" onclick="button();">Welcome to my Game Engine!</h1>
 <div id="project-mechanic-info-tab">
 <h2>!!!This Project is currently in developement</h2>
   
