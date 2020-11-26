@@ -1,8 +1,11 @@
 #version 330 core
 in vec2 UV;
+in vec3 normal;
 out vec4 FragColor;
 uniform sampler2D myTextureSampler;
 void main()
 {
-   FragColor = texture( myTextureSampler, UV ).rgba;
+float cross = dot(normal, normalize(vec3(1,1,0)));
+   FragColor = texture( myTextureSampler, UV ).rgba * cross;
+   //FragColor = vec4(normal.x,normal.y,normal.z,1) * cross;
 }

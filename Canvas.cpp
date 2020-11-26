@@ -13,7 +13,7 @@ void Canvas::Draw(sf::Window* window)
 {
     //Object* triangle = 0;
     if (triangle == 0) {
-        triangle = new Object();
+        //triangle = new Object();
     }
     triangle->Draw();
     /*

@@ -15,7 +15,7 @@
 class Object
 {
 public:
-	Object();
+	Object(const char* ModelFile, Material* material);
 	~Object();
 	void ShaderInit();
 	void AttributeInit();

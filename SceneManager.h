@@ -8,7 +8,7 @@ class SceneManager
 public:
 	SceneManager();
 	~SceneManager();
-	void AddObject(glm::vec3 position);
+	void AddObject(glm::vec3 position, const char* ModelFile, Material* material);
 	void Update();
 	static SceneManager& get();
 private:

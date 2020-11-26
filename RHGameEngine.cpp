@@ -8,15 +8,15 @@
 //Window* w;
 Window w;
 SceneManager sceneM;
+Material* material;
 int main()
 {
     w.MakeWindow("My Window", 800, 800);
     glewInit();
     glEnable(GL_DEPTH_TEST);
-   // glDepthFunc(GL_GREATER);
     glEnable(GL_CULL_FACE);
-    sceneM.AddObject(glm::vec3(0, 0, 0));
-    sceneM.AddObject(glm::vec3(1,1,-1));
+    material = new Material("SimpleVertexShader.vertexshader", "SimpleColor.fragmentshader", "textures/Grass.bmp");
+    sceneM.AddObject(glm::vec3(0,0,0), "models/BasicSphere.obj",material);
     while (w.CheckOpen()) {
         //Loop here
         //end draw loop

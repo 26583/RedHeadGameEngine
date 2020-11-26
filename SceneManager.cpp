@@ -11,9 +11,9 @@ SceneManager::~SceneManager()
 {
 }
 
-void SceneManager::AddObject(glm::vec3 position)
+void SceneManager::AddObject(glm::vec3 position, const char* ModelFile, Material* material)
 {
-    Object* object = new Object();
+    Object* object = new Object(ModelFile, material);
     object->SetPosition(position);
     scene.push_back(object);
 }
